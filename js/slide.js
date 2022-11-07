@@ -109,6 +109,7 @@ export class Slide {
 
 	activeNextSlide() {
 		if (this.index.next !== undefined) this.changeSlide(this.index.next)
+		else this.changeSlide(0)
 	}
 
 	onResize() {
@@ -144,7 +145,7 @@ export class Slide {
 	}
 }
 
-export class SlideNav extends Slide {
+export default class SlideNav extends Slide {
 	constructor(slide, wrapper) {
     super(slide, wrapper);
     this.bindControlEvents();
